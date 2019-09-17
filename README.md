@@ -45,4 +45,11 @@ services:
       DOMAIN: docker-compose-test
 ```
 
+You can run the example like this.
+
+```console
+$ cd examples
+$ docker-compose up
+```
+
 ![nginx screenshot](examples/nginx-screenshot.png)
