@@ -1,6 +1,6 @@
 # Docker Serveo
 
-A container to tunnel a local service to the internet using serveo.net.
+A container to tunnel a local service to the internet using [serveo.net](https://serveo.net).
 
 ## Usage
 
@@ -53,3 +53,9 @@ $ docker-compose up
 ```
 
 ![nginx screenshot](examples/nginx-screenshot.png)
+
+---
+
+_I'm in no way affiliated with serveo.net. I just ❤ their service._
+
+If you found this useful please [star the GitHub repo](https://github.com/jacobtomlinson/docker-serveo) and [tell me on twitter](https://twitter.com/_jacobtomlinson)!
