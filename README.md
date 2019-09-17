@@ -45,4 +45,4 @@ services:
       DOMAIN: docker-compose-test
 ```
 
-![nginx screenshot]('examples/nginx-screenshot.png')
+![nginx screenshot](examples/nginx-screenshot.png)
