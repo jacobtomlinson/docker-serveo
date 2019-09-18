@@ -1,5 +1,7 @@
 # Docker Serveo
 
+[![](https://images.microbadger.com/badges/image/jacobtomlinson/serveo.svg)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
+
 A container to tunnel a local service to the internet using [serveo.net](https://serveo.net).
 
 ## Usage
@@ -56,7 +58,7 @@ $ docker-compose up
 
 ### Kubernetes
 
-The following kubernetes config will create a deployment of an nginx web server and a service for it, then will create a serveo container that will expose the service at https://kubernetes-test.server.net.
+The following kubernetes config will create a deployment of an nginx web server and a service for it, then will create a serveo container that will expose the service at https://kubernetes-test.serveo.net.
 
 ```yaml
 apiVersion: apps/v1
