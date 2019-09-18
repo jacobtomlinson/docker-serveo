@@ -1,6 +1,11 @@
 # Docker Serveo
 
-[![Microbadger image size badge](https://images.microbadger.com/badges/image/jacobtomlinson/serveo.svg)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
+[![Docker Stars](https://img.shields.io/docker/stars/jacobtomlinson/serveo)](https://cloud.docker.com/repository/docker/jacobtomlinson/serveo)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jacobtomlinson/serveo)](https://cloud.docker.com/repository/docker/jacobtomlinson/serveo)
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/jacobtomlinson/serveo)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/jacobtomlinson/serveo)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
+
+
 
 A container to tunnel a local service to the internet using [serveo.net](https://serveo.net).
 
