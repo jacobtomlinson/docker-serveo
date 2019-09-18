@@ -1,6 +1,6 @@
 # Docker Serveo
 
-[![](https://images.microbadger.com/badges/image/jacobtomlinson/serveo.svg)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
+[![Microbadger image size badge](https://images.microbadger.com/badges/image/jacobtomlinson/serveo.svg)](https://microbadger.com/images/jacobtomlinson/serveo "Get your own image badge on microbadger.com")
 
 A container to tunnel a local service to the internet using [serveo.net](https://serveo.net).
 
