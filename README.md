@@ -48,11 +48,87 @@ services:
 You can run the example like this.
 
 ```console
-$ cd examples
+$ cd examples/compose
 $ docker-compose up
 ```
 
-![nginx screenshot](examples/nginx-screenshot.png)
+![screenshot of browser showing nginx test page](examples/compose/compose-screenshot.jpg)
+
+### Kubernetes
+
+The following kubernetes config will create a deployment of an nginx web server and a service for it, then will create a serveo container that will expose the service at https://kubernetes-test.server.net.
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: web
+          image: nginx
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector:
+    app: web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serveo
+  labels:
+    app: serveo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: serveo
+  template:
+    metadata:
+      labels:
+        app: serveo
+    spec:
+      containers:
+        - name: serveo
+          image: jacobtomlinson/serveo:latest
+          env:
+            - name: LOCAL_HOST
+              value: "web"
+            - name: LOCAL_PORT
+              value: "80"
+            - name: DOMAIN
+              value: "kubernetes-test"
+```
+
+You can create it like this
+
+```console
+$ cd examples/kubernetes
+$ kubectl apply -f example.yaml
+```
+
+![screenshot of terminal showing kubernetes resources and browser showing nginx test page](examples/kubernetes/kubernetes-screenshot.png)
 
 ---
 
