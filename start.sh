@@ -12,5 +12,6 @@ autossh -M 0 \
     -oServerAliveCountMax=$SERVER_ALIVE_COUNT_MAX \
     -oStrictHostKeyChecking=no \
     -oUserKnownHostsFile=/dev/null \
+    -oExitOnForwardFailure=yes \
     -R $DOMAIN$REMOTE_PORT:$LOCAL_HOST:$LOCAL_PORT \
     $SERVEO_HOST
