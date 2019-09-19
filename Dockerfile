@@ -1,8 +1,6 @@
-FROM debian:jessie
+FROM alpine:3
 
-RUN apt-get update && apt-get install -y \
-    openssh-client autossh \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache add autossh bash tini
 
 ADD start.sh .
 
@@ -17,4 +15,5 @@ ENV SERVEO_HOST serveo.net
 ENV SERVER_ALIVE_INTERVAL 30
 ENV SERVER_ALIVE_COUNT_MAX 3
 
+ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["./start.sh"]
